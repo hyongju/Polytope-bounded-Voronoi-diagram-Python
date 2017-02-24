@@ -13,7 +13,7 @@ from perpBisector2d import perpBisector2d
 
 
 # points in R^2
-pnts = np.random.rand(10,2)
+pnts = np.random.rand(100,2)
 
 # boundary points in R^2
 bnd = np.array([[0,0],[1,0],[1,1],[0,1]])
@@ -90,6 +90,6 @@ for i, obj in enumerate(pnts):
 		plt.plot(pntsv[i][:,0],pntsv[i][:,1],'x')
 		for simplex in vorhull.simplices:
 			plt.plot(pntsv[i][simplex, 0],pntsv[i][simplex,1],'k-')
-
+plt.axis('equal')
 plt.show()
 
